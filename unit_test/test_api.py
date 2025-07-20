@@ -1,7 +1,7 @@
 # call fask REST API ruunning on localhost:5002
 import requests 
 def call_predict_api(flightType, agency, distance, time):
-    url = 'http://localhost:5001/predict'
+    url = 'http://localhost:5002/predict'
     data = {
     'distance': 1000,
     'time': 2,        
@@ -17,4 +17,4 @@ def call_predict_api(flightType, agency, distance, time):
         raise Exception(f"API call failed with status code {response.status_code}: {response.text}")
     
 
-print(call_predict_api(['premium'],['Rainbow'] ,[1000],[2]))
+print("The predicted price returned from API: ", call_predict_api(['premium'],['Rainbow'] ,[1000],[2]))

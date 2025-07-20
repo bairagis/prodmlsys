@@ -39,7 +39,7 @@ def task2__transform_and_train(**context):
 
     X = flights_df.drop('price', axis=1)
     Y= flights_df['price']
-    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.1, random_state=42)
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.1, random_state=42) 
 
     flightType_encoder = LabelEncoder()
     agency_encoder = LabelEncoder()

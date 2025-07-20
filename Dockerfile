@@ -26,4 +26,4 @@ RUN apt-get update && apt-get install -y lsof && \
     lsof -ti:5002 | xargs --no-run-if-empty kill || true
 
 # Run the Flask app
-CMD ["flask", "run"]
+CMD ["python", "api/predict_flight_price_api.py"]
